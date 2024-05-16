@@ -1,0 +1,32 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<thead>
+<th>Identificación</th>
+<th>Nombres</th>
+<th>Apellidos</th>
+<th>Correo</th>
+<th>Movil</th>
+<th>Dirección de residencia</th>
+<th>Municipio de votación</th>
+</thead>
+<tr th:each="registro:${registros}">
+	<td><h6 th:text="${registro.REGIdentifica}"></h6></td>
+	<td><h6 th:text="${registro.REGNombres}"></td>
+	<td><h6 th:text="${registro.REGApellidos}"></td>
+	<td><h6 th:text="${registro.REGCorreo}"></td>
+	<td><h6 th:text="${registro.REGMovil}"></td>
+	<td><h6 th:text="${registro.REGDireccion}"></td>
+	<td><h6 th:text="${registro.REGMunicipio}"></td>
+</tr>
+</table>
+</body>
+</html>
